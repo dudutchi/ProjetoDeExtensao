@@ -66,3 +66,39 @@ body {
     font-weight: bold;
     white-space: nowrap;
 }
+
+#cardapio {
+  text-align: center;
+  padding: 50px 10%;
+  background-color: #fff;
+}
+
+#cardapio h2 {
+  color: #184d00;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.categoria {
+  margin-bottom: 40px;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.categoria h3 {
+  color: #184d00;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.categoria ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categoria li {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
