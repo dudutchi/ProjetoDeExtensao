@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "nome": "EDUARDO FURTADO MOREIRA",
+    "sabor": "calabresa",
+    "tamanho": "45cm",
+    "bebida": "coca",
+    "bordaRecheada": "sim (catupiry)",
+    "observacao": "sem cebola",
+    "data": "25/11/2025, 12:00:45"
+  }
+]
