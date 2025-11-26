@@ -28,14 +28,23 @@
 
     <h1>Faça seu Pedido</h1>
 
+    <p class="info-bairros">
+    🚚 *Entregamos nos seguintes bairros:* <br>
+    Caxias, Jardim Primavera, Saracuruna, Gramacho, Campos Elíseos, Figueira, Pilar.
+    </p>
+
+
     <div class="pedido-container">
         <form id="formPedido">
             <input type="text" name="nome" placeholder="Seu nome" required>
             <input type="text" name="sabor" placeholder="Sabor da pizza" required>
             <input type="text" name="tamanho" placeholder="Tamanho" required>
             <input type="text" name="bebida" placeholder="Bebida" required>
-            <input type="text" name="bordaRecheada" placeholder="Borda Recheada" required>
+            <input type="text" name="borda" placeholder="Borda Recheada" required>
             <input type="text" name="observacao" placeholder="Observação" required>
+            <input type="text" name="contato" placeholder="Contato" required>
+            <input type="text" name="endereco" placeholder="Endereço" required>
+
             <button type="submit">Enviar Pedido</button>
 
             <p id="resposta" class="resposta"></p>
@@ -63,14 +72,16 @@
         document.getElementById("formPedido").addEventListener("submit", async (e) => {
             e.preventDefault();
 
-            const dados = {
-                nome: e.target.nome.value,
-                sabor: e.target.sabor.value,
-                tamanho: e.target.tamanho.value,
-                bebida: e.target.bebida.value,
-                bordaRecheada: e.target.bordaRecheada.value,
-                observacao: e.target.observacao.value
-            };
+        const dados = {
+            nome: e.target.nome.value,
+            sabor: e.target.sabor.value,
+            tamanho: e.target.tamanho.value,
+            bebida: e.target.bebida.value,
+            borda: e.target.borda.value,
+            observacao: e.target.observacao.value,
+            contato: e.target.contato.value,
+            endereco: e.target.endereco.value   
+        };
 
             const resposta = await fetch("/enviar-pedido", {
                 method: "POST",

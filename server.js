@@ -14,34 +14,38 @@ app.use(express.static(__dirname));
 // Rota para receber pedidos
 app.post("/enviar-pedido", (req, res) => {
 
-    const {
-        nome,
-        sabor,
-        tamanho,
-        sabor2,
-        tamanho2,
-        bebida,
-        paoDeAlho,
-        pizzaDoce,
-        borda,
-        observacao,
-        promocao
-    } = req.body;
+        const {
+            nome,
+            sabor,
+            tamanho,
+            sabor2,
+            tamanho2,
+            bebida,
+            paoDeAlho,
+            pizzaDoce,
+            borda,
+            observacao,
+            promocao,
+            contato,
+            endereco, 
+        } = req.body;
 
-    const novoPedido = {
-        promocao: promocao || null,
-        nome: nome || null,
-        sabor: sabor || null,
-        tamanho: tamanho || null,
-        sabor2: sabor2 || null,
-        tamanho2: tamanho2 || null,
-        bebida: bebida || null,
-        paoDeAlho: paoDeAlho || null,   // ← NOVO CAMPO
-        pizzaDoce: pizzaDoce || null,
-        borda: borda || null,
-        observacao: observacao || "",
-        data: new Date().toLocaleString("pt-BR")
-    };
+        const novoPedido = {
+            promocao: promocao || null,
+            nome: nome || null,
+            sabor: sabor || null,
+            tamanho: tamanho || null,
+            sabor2: sabor2 || null,
+            tamanho2: tamanho2 || null,
+            bebida: bebida || null,
+            paoDeAlho: paoDeAlho || null,
+            pizzaDoce: pizzaDoce || null,
+            borda: borda || null,
+            observacao: observacao || "",
+            contato: contato || null,
+            endereco: endereco || null,   
+            data: new Date().toLocaleString("pt-BR")
+        };
 
     const filePath = path.join(__dirname, "pedidos.json");
 

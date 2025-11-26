@@ -28,11 +28,16 @@
 
     <h1>Faça seu Pedido — Promoção CarioKBday</h1>
 
+        <p class="info-bairros">
+    🚚 *Entregamos nos seguintes bairros:* <br>
+    Caxias, Jardim Primavera, Saracuruna, Gramacho, Campos Elíseos, Figueira, Pilar.
+        </p>
+
     <div class="pedido-container">
 
         <form id="formPedido">
 
-            <!-- CAMPO OCULTO: identifica ao servidor que este pedido pertence à promoção -->
+        
             <input type="hidden" name="promocao" value="CarioKBday">
 
             <input type="text" name="nome" placeholder="Seu nome" required>
@@ -43,6 +48,8 @@
             <input type="text" name="bebida" placeholder="Bebida" required>
             <input type="text" name="borda" placeholder="Borda recheada (Sim ou não, se sim qual)" required>
             <input type="text" name="observacao" placeholder="Observação" required>
+            <input type="text" name="contato" placeholder="Contato" required>
+            <input type="text" name="endereco" placeholder="Endereço" required>
 
             <button type="submit">Enviar Pedido</button>
 
@@ -81,7 +88,9 @@
                 bebida: e.target.bebida.value,
                 borda: e.target.borda.value,
                 observacao: e.target.observacao.value,
-                promocao: e.target.promocao.value // ← Promoção enviada ao servidor
+                promocao: e.target.promocao.value,
+                contato: e.target.contato.value,
+                endereco: e.target.endereco.value
             };
 
             const resposta = await fetch("/enviar-pedido", {

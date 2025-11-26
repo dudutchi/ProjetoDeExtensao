@@ -19,7 +19,6 @@ body {
 
 body {
     padding-top: 12vh;
-    /* Mantém o conteúdo abaixo da navbar fixa */
     display: flex;
     flex-direction: column;
 }
@@ -31,21 +30,17 @@ body {
 
 .nav-container {
     position: fixed;
-    /* Mantém a barra sempre visível */
     top: 0;
     left: 0;
     width: 100%;
     height: 12vh;
     background-color: #103f01;
-
     display: grid;
-    /* Layout organizado: logo | menu */
     grid-template-columns: auto 1fr auto;
     align-items: center;
 
     padding: 0 20px;
     z-index: 999;
-    /* Evita que algo cubra a navbar */
 }
 
 .logo {
@@ -246,7 +241,6 @@ h1 {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     width: 320px;
-    /* Tamanho ideal de formulário */
 }
 
 #formPedido input {
@@ -285,6 +279,18 @@ h1 {
     color: #103f01;
 }
 
+.info-bairros {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    padding: 10px;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+
 
 /* =======================================================
     PÁGINAS DE PROMOÇÃO – COMBO
@@ -321,7 +327,6 @@ h1 {
     transform: translateX(-20px);
     text-align: justify;
     text-justify: inter-word;
-    /* Justifica tipo Word */
 }
 
 .combo-btn {
@@ -397,7 +402,6 @@ h1 {
     color: #fff;
     padding: 12px 0;
     margin-top: auto;
-    /* Empurra o footer para o fim */
 }
 
 .footer-container {
