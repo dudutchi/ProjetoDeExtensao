@@ -26,20 +26,26 @@
         </div>
     </div>
 
-    <h1>Faça seu Pedido</h1>
+    <h1>Faça seu Pedido — Promoção Pão de Alho + Refrigerante!</h1>
 
     <div class="pedido-container">
+
         <form id="formPedido">
+
+            <!-- CAMPO OCULTO: identifica a promoção -->
+            <input type="hidden" name="promocao" value="Pão de Alho + Refrigerante">
+
             <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="text" name="sabor" placeholder="Sabor da pizza" required>
-            <input type="text" name="tamanho" placeholder="Tamanho" required>
-            <input type="text" name="bebida" placeholder="Bebida" required>
-            <input type="text" name="bordaRecheada" placeholder="Borda Recheada" required>
-            <input type="text" name="observacao" placeholder="Observação" required>
+            <input type="text" name="paoDeAlho" value="Pão de Alho" readonly required>
+            <input type="text" name="bebida" placeholder="Escolha qual refrigerante deseja"" required>
+            <input type=" text" name="observacao" placeholder="Observação" required>
+
             <button type="submit">Enviar Pedido</button>
 
             <p id="resposta" class="resposta"></p>
+
         </form>
+
     </div>
 
     <footer class="footer">
@@ -65,11 +71,10 @@
 
             const dados = {
                 nome: e.target.nome.value,
-                sabor: e.target.sabor.value,
-                tamanho: e.target.tamanho.value,
+                paoDeAlho: e.target.paoDeAlho.value,
                 bebida: e.target.bebida.value,
-                bordaRecheada: e.target.bordaRecheada.value,
-                observacao: e.target.observacao.value
+                observacao: e.target.observacao.value,
+                promocao: e.target.promocao.value
             };
 
             const resposta = await fetch("/enviar-pedido", {

@@ -12,12 +12,14 @@
     font-family: "Roboto", sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
-    padding-top: 12vh; /* Mantém o conteúdo abaixo da navbar fixa */
+    padding-top: 12vh;
+    /* Mantém o conteúdo abaixo da navbar fixa */
     display: flex;
     flex-direction: column;
 }
@@ -28,19 +30,22 @@ body {
 ======================================================= */
 
 .nav-container {
-    position: fixed; /* Mantém a barra sempre visível */
+    position: fixed;
+    /* Mantém a barra sempre visível */
     top: 0;
     left: 0;
     width: 100%;
     height: 12vh;
     background-color: #103f01;
 
-    display: grid; /* Layout organizado: logo | menu */
+    display: grid;
+    /* Layout organizado: logo | menu */
     grid-template-columns: auto 1fr auto;
     align-items: center;
 
     padding: 0 20px;
-    z-index: 999; /* Evita que algo cubra a navbar */
+    z-index: 999;
+    /* Evita que algo cubra a navbar */
 }
 
 .logo {
@@ -240,7 +245,8 @@ h1 {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    width: 320px; /* Tamanho ideal de formulário */
+    width: 320px;
+    /* Tamanho ideal de formulário */
 }
 
 #formPedido input {
@@ -314,7 +320,8 @@ h1 {
     color: #000;
     transform: translateX(-20px);
     text-align: justify;
-    text-justify: inter-word; /* Justifica tipo Word */
+    text-justify: inter-word;
+    /* Justifica tipo Word */
 }
 
 .combo-btn {
@@ -360,7 +367,7 @@ h1 {
     height: 380px;
     object-fit: cover;
     border-radius: 25px;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .sobre-wrapper h1 {
@@ -389,7 +396,8 @@ h1 {
     background-color: #111;
     color: #fff;
     padding: 12px 0;
-    margin-top: auto; /* Empurra o footer para o fim */
+    margin-top: auto;
+    /* Empurra o footer para o fim */
 }
 
 .footer-container {
@@ -429,4 +437,22 @@ h1 {
     margin-top: 6px;
     font-size: 11px;
     opacity: 0.7;
+}
+
+/* botão pedido */
+
+.combo-btn {
+    display: inline-block;
+    background-color: #103f01;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.combo-btn:hover {
+    background-color: #184d00;
 }
