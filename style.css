@@ -38,7 +38,6 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-
     padding: 0 20px;
     z-index: 999;
 }
@@ -47,7 +46,7 @@ body {
     height: 80%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: #fff;
+    ;
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -55,6 +54,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .nav-menu ul {
@@ -369,7 +369,7 @@ h1 {
 .sobre-imagem img {
     width: 100%;
     max-width: 850px;
-    height: 380px;
+    height: 680px;
     object-fit: cover;
     border-radius: 25px;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
