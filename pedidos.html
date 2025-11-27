@@ -29,8 +29,9 @@
     <h1>Faça seu Pedido</h1>
 
     <p class="info-bairros">
-    🚚 *Entregamos nos seguintes bairros:* <br>
-    Engenho de Dentro, Cachambi, Lins de Vasconcelos, Grajaú, Todos os Santos, Del Castilho, Maria da Graça, Piedade, Abolição.
+        🚚 *Entregamos nos seguintes bairros:* <br>
+        Engenho de Dentro, Cachambi, Lins de Vasconcelos, Grajaú, Todos os Santos, Del Castilho, Maria da Graça,
+        Piedade, Abolição.
     </p>
 
 
@@ -61,10 +62,15 @@
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="pedidos.html">Pedidos</a></li>
                 <li><a href="promocoes.html">Promoções</a></li>
-                <li><a href="https://chat.whatsapp.com/ErixSqBX1qYJoTUzCR8EV7?mode=hqrt2" target="_blank" rel="noopener noreferrer"> Fale Conosco</a></li>
+                <li><a href="https://chat.whatsapp.com/ErixSqBX1qYJoTUzCR8EV7?mode=hqrt2" target="_blank"
+                        rel="noopener noreferrer">Fale Conosco</a></li>
+                <li><a href="ondeEstamos.html">Onde Estamos</a></li>
             </ul>
 
-            <div class="footer-copy">© 2025 Pizzaria CarioK</div>
+            <div class="footer-copy">
+                © 2025 Pizzaria CarioK
+            </div>
+
         </div>
     </footer>
 
@@ -72,16 +78,16 @@
         document.getElementById("formPedido").addEventListener("submit", async (e) => {
             e.preventDefault();
 
-        const dados = {
-            nome: e.target.nome.value,
-            sabor: e.target.sabor.value,
-            tamanho: e.target.tamanho.value,
-            bebida: e.target.bebida.value,
-            borda: e.target.borda.value,
-            observacao: e.target.observacao.value,
-            contato: e.target.contato.value,
-            endereco: e.target.endereco.value   
-        };
+            const dados = {
+                nome: e.target.nome.value,
+                sabor: e.target.sabor.value,
+                tamanho: e.target.tamanho.value,
+                bebida: e.target.bebida.value,
+                borda: e.target.borda.value,
+                observacao: e.target.observacao.value,
+                contato: e.target.contato.value,
+                endereco: e.target.endereco.value
+            };
 
             const resposta = await fetch("/enviar-pedido", {
                 method: "POST",

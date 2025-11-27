@@ -415,7 +415,7 @@ img:hover {
 }
 
 .footer-slogan {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 6px;
     opacity: 0.9;
 }
@@ -433,7 +433,7 @@ img:hover {
 .footer-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 13px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -443,7 +443,7 @@ img:hover {
 
 .footer-copy {
     margin-top: 6px;
-    font-size: 11px;
+    font-size: 15px;
     opacity: 0.7;
 }
 
@@ -463,4 +463,56 @@ img:hover {
 
 .combo-btn:hover {
     background-color: #184d00;
+}
+
+/* =======================================================
+    ONDE ESTAMOS
+======================================================= */
+
+.onde-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto 80px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.onde-imagem img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.onde-texto {
+    max-width: 450px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #222;
+    text-align: justify;
+    border-left: 4px solid #103f01;
+    padding-left: 18px;
+}
+
+@media (max-width: 900px) {
+    .onde-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .onde-texto {
+        border-left: none;
+        padding-left: 0;
+        text-align: justify;
+        max-width: 90%;
+    }
+
+    .onde-imagem img {
+        max-width: 90%;
+    }
 }
