@@ -178,7 +178,7 @@ h1 {
     gap: 20px;
 }
 
-.promo-main {
+.promo-main  {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -191,6 +191,10 @@ h1 {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+img:hover {
+    transform: scale(1.01);
 }
 
 .promo-lateral {
