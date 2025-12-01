@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <h1>Faça seu Pedido</h1>
+    <h1>Faça seu Pedido — Promoção Recheia aí!</h1>
 
     <p class="info-bairros">
         🚚 *Entregamos nos seguintes bairros:* <br>
@@ -34,14 +34,20 @@
         Piedade, Abolição.
     </p>
 
-
     <div class="pedido-container">
+
         <form id="formPedido">
+
+            <!-- CAMPO OCULTO: identifica a promoção -->
+            <input type="hidden" name="promocao" value="Combo Recheia Aí">
+
             <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="text" name="sabor" placeholder="Sabor da pizza" required>
-            <input type="text" name="tamanho" placeholder="Tamanho" required>
+            <input type="text" name="sabor" placeholder="Sabor da primeira Pizza" required>
+            <input type="text" name="tamanho" placeholder="Tamanho da primeira Pizza" required>
+            <input type="text" name="sabor2" placeholder="Sabor da segunda Pizza com borda grátis" required>
+            <input type="text" name="tamanho2" placeholder="Tamanho da segunda Pizza" required>
             <input type="text" name="bebida" placeholder="Bebida" required>
-            <input type="text" name="borda" placeholder="Borda Recheada" required>
+            <input type="text" name="borda" placeholder="Borda recheada grátis" required>
             <input type="text" name="observacao" placeholder="Observação" required>
             <input type="text" name="contato" placeholder="Contato" required>
             <input type="text" name="endereco" placeholder="Endereço" required>
@@ -49,11 +55,14 @@
             <button type="submit">Enviar Pedido</button>
 
             <p id="resposta" class="resposta"></p>
+
         </form>
+
     </div>
 
     <footer class="footer">
         <div class="footer-container">
+
             <p class="footer-slogan">Pizzaria CarioK — Sabor que conquista!</p>
 
             <ul class="footer-links">
@@ -81,9 +90,12 @@
                 nome: e.target.nome.value,
                 sabor: e.target.sabor.value,
                 tamanho: e.target.tamanho.value,
+                sabor2: e.target.sabor2.value,
+                tamanho2: e.target.tamanho2.value,
                 bebida: e.target.bebida.value,
                 borda: e.target.borda.value,
                 observacao: e.target.observacao.value,
+                promocao: e.target.promocao.value,
                 contato: e.target.contato.value,
                 endereco: e.target.endereco.value
             };
@@ -100,6 +112,7 @@
             e.target.reset();
         });
     </script>
+
 
 </body>
 
